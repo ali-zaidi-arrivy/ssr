@@ -247,8 +247,7 @@
       window.sendSignalToNode(response);
 
       window.func = function (data) {
-        console.log(data);
-        return data;
+        window.sendSignalToNode(data);
       };
     </script>
   </body>
