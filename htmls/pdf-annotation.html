@@ -237,12 +237,15 @@
       </div>
     </div>
     <script>
-      window.sendSignalToNode({
-        name: "Ali Zaidi",
-        age: 30,
-        array: [1, 2, 3, 4, 5],
-        obj: { abc: 1, xyz: 2 },
-      });
+      window.func = function (url) {
+        window.sendSignalToNode({
+          name: "Ali Zaidi",
+          age: 30,
+          array: [1, 2, 3, 4, 5],
+          obj: { abc: 1, xyz: 2 },
+          url: url,
+        });
+      };
     </script>
   </body>
 </html>
