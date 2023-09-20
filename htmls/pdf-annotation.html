@@ -245,6 +245,11 @@
       });
 
       window.sendSignalToNode(response);
+
+      window.func = function (data) {
+        console.log(data);
+        return data;
+      };
     </script>
   </body>
 </html>
