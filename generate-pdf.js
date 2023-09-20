@@ -10,14 +10,18 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
 
     // Navigate to the desired page
-    await page.goto('https://sandbox.arrivy.com/live/track/ahBzfmFycml2eS1zYW5kYm94ciILEgRVc2VyGICAgOTp3pAJDAsSBFRhc2sYgICggI7mrgoM/forms/4932333059702784?hash=7epi8ssn2w9', { "waitUntil": "networkidle0" });
+    // await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/form.html', { "waitUntil": "networkidle0" });
+    await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/pdf-annotation', { "waitUntil": "networkidle0" });
+
+    await page.emulateMediaType('screen');
 
     // Wait for any asynchronous content to load (if needed)
-    await page.waitForSelector('.btn___yuS3n');
+    // await page.waitForSelector('.btn___yuS3n');
 
     // Optionally, you can modify the page before generating PDF
     // For example, you can add custom CSS to style the page
     // await page.addStyleTag({ content: 'YOUR_CUSTOM_CSS_HERE' });
+    await page.addStyleTag({ content: '@page { size: auto; }' })
 
     // Set up options for generating the PDF
     const pdfOptions = {
