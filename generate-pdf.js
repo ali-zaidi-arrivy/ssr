@@ -121,8 +121,9 @@ const handleException = async (error, request, step = null) => {
 
 
     // Navigate to the desired page
-    await page.goto('https://test-pdf-annotations-dot-arrivy-sandbox.uc.r.appspot.com/api/files/AMIfv948I5OLugRy12IMuxzWqLEA7JqBSCBXnKg7lEObICWYS7tVOWj9_5595Of9gmGgWpJ1ZNjQgjC9ZuzBOxcD5evEuuBP8NH46rfx7kaPH60oEFarpwX7LeV7pv8JqGMDt0mtEqHEI0lXv2f7gXb1SNcYYfdkeXHg3ccKWHa5iN6ozkNGc0lNXZMs_4SpzNkikzJZbc5Lje-zSMnnImJ6y3SE3IV6lMBCdW0AYRtHrWrJW_WM6GycYvvCpdSD7BZrBRH9cOzpGd7skyna1KcdPSSJ3bEDFIpg8kg-me8omvxj9Dm2HTMALk3DzXQAvPu7osadjnenzVsL2KnRB20X-xvWkW9h2i_hle1FFbbH0puCfINCDsBInYpu254R8g9CuHZZ5gek', { "waitUntil": "networkidle2" });
+    // await page.goto('https://test-pdf-annotations-dot-arrivy-sandbox.uc.r.appspot.com/api/files/AMIfv948I5OLugRy12IMuxzWqLEA7JqBSCBXnKg7lEObICWYS7tVOWj9_5595Of9gmGgWpJ1ZNjQgjC9ZuzBOxcD5evEuuBP8NH46rfx7kaPH60oEFarpwX7LeV7pv8JqGMDt0mtEqHEI0lXv2f7gXb1SNcYYfdkeXHg3ccKWHa5iN6ozkNGc0lNXZMs_4SpzNkikzJZbc5Lje-zSMnnImJ6y3SE3IV6lMBCdW0AYRtHrWrJW_WM6GycYvvCpdSD7BZrBRH9cOzpGd7skyna1KcdPSSJ3bEDFIpg8kg-me8omvxj9Dm2HTMALk3DzXQAvPu7osadjnenzVsL2KnRB20X-xvWkW9h2i_hle1FFbbH0puCfINCDsBInYpu254R8g9CuHZZ5gek', { "waitUntil": "networkidle2" });
     // await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/form.html', { "waitUntil": "networkidle0" });
+    await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/forms-v2.html', { "waitUntil": "networkidle0" });
     // await page.goto('http://localhost:7001/sign-pdf?task_id=5040161301725184&file_id=5603111255146496&isSSR=true&pdf_annotation_token=5d5b0fa4-aa4c-4a71-8438-bdb746424aa3&company_id=5629499534213120&payload_dump_id=5400f201-db75-4ccf-8847-44dd1ffa024c', { "waitUntil": "networkidle0", timeout: 60_000 });
 
 
