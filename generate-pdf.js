@@ -180,30 +180,32 @@ const handleException = async (error, request, step = null) => {
     // await page.addStyleTag({ content: '@page { size: auto; }' })
 
     // Set up options for generating the PDF
-    await page.exposeFunction('onBodyLoaded', async () => {
-        await page.emulateMediaType('screen');
-        await new Promise(resolve => setTimeout(resolve, 20000));
-        const pdfOptions = {
-            path: 'output.pdf', // Change this to your desired output path
-            printBackground: true, // Include background colors/images
-            width: 794,
-            height: 1123,
-            margin: {
-                left: 0,
-                top: 10,
-                right: 0,
-                bottom: 10
-            }
-        };
+    // await page.exposeFunction('onBodyLoaded', async () => {
 
-        // // Generate the PDF
-        await page.pdf(pdfOptions);
-
-        // // Close the browser
-        await browser.close();
-    })
+    // })
     // page.setContent(data.content, { waitUntil: 'networkidle2', timeout: 60_000 })
     await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/forms-v2-p1.html', { "waitUntil": "networkidle0", timeout: 0 });
+
+    await page.emulateMediaType('screen');
+    await new Promise(resolve => setTimeout(resolve, 10000));
+    const pdfOptions = {
+        path: 'output.pdf', // Change this to your desired output path
+        printBackground: true, // Include background colors/images
+        width: 794,
+        height: 1123,
+        margin: {
+            left: 0,
+            top: 10,
+            right: 0,
+            bottom: 10
+        }
+    };
+
+    // // Generate the PDF
+    await page.pdf(pdfOptions);
+
+    // // Close the browser
+    await browser.close();
 
 
 
