@@ -203,7 +203,7 @@ const handleException = async (error, request, step = null) => {
         await browser.close();
     })
     // page.setContent(data.content, { waitUntil: 'networkidle2', timeout: 60_000 })
-    await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/forms-v2-p1.html', { "waitUntil": "networkidle0" });
+    await page.goto('https://ali-zaidi-arrivy.github.io/ssr/htmls/forms-v2-p1.html', { "waitUntil": "networkidle0", timeout: 0 });
 
 
 
