@@ -182,6 +182,7 @@ const handleException = async (error, request, step = null) => {
     // Set up options for generating the PDF
     await page.exposeFunction('onBodyLoaded', async () => {
         await page.emulateMediaType('screen');
+        await new Promise(resolve => setTimeout(resolve, 20000));
         const pdfOptions = {
             path: 'output.pdf', // Change this to your desired output path
             printBackground: true, // Include background colors/images
